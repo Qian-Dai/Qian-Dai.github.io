@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details Showcase</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
     <style>
-        /* Basic Styles */
+        /* CSS Variables for Consistent Color Scheme */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #255f96;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --light-text-color: #7f8c8d;
+            --white: #ffffff;
+        }
+
+        /* Basic Reset */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
             line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            scroll-behavior: smooth;
         }
+
         a {
-            color: #3498db;
+            color: var(--secondary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
+
         a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
         }
 
         /* Navigation Bar */
         .navbar {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: var(--primary-color);
+            color: var(--white);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -37,67 +57,114 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         .navbar h1 {
+            font-family: 'Merriweather', serif;
             font-size: 24px;
         }
+
         .navbar nav a {
             margin-left: 20px;
+            font-weight: 500;
             font-size: 16px;
         }
 
         /* Hero Banner */
         .hero {
-            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
-            height: 100px;
+            background: url('./photo/hinge1.jpg') no-repeat center center/cover;
+            height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            margin-top: 60px; /* Height of the navbar */
+            color: var(--white);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            position: relative;
+            margin-top: 60px; /* Height of navbar */
         }
+
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: #e3ef38;
+        }
+
         .hero h2 {
+            font-family: 'Merriweather', serif;
             font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Main Content Container */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 60px auto 40px;
             padding: 0 20px;
         }
 
-        /* Project Details Sections */
+        /* Section Styling */
         .section {
-            background-color: #fff;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: var(--white);
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
         .section h2 {
-            margin-bottom: 15px;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            display: inline-block;
-            padding-bottom: 5px;
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 10px;
         }
+
         .section p {
-            margin-bottom: 15px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: var(--light-text-color);
         }
 
         /* Image and Text Layout */
         .content-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             align-items: center;
         }
+
         .content-grid img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .content-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
         .content-grid div {
             padding: 10px;
         }
@@ -106,44 +173,80 @@
         .results {
             text-align: center;
         }
+
         .results img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
-        .results .metrics {
-            margin-top: 20px;
+
+        .results img:hover {
+            transform: scale(1.05);
+        }
+
+        .metrics {
+            margin-top: 30px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            gap: 20px;
         }
+
         .metric {
-            background-color: #3498db;
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 10px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
             flex: 1 1 200px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
         }
+
+        .metric:hover {
+            background-color: var(--accent-color);
+        }
+
         .metric h3 {
+            font-size: 24px;
             margin-bottom: 10px;
+        }
+
+        .metric p {
+            font-size: 20px;
+        }
+
+        /* Contact Information */
+        #contact ul {
+            list-style-type: none;
+        }
+
+        #contact li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: var(--light-text-color);
+        }
+
+        #contact a {
+            color: var(--secondary-color);
+        }
+
+        #contact a:hover {
+            color: var(--accent-color);
         }
 
         /* Footer */
         footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: var(--primary-color);
+            color: var(--white);
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
+            position: relative;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -153,7 +256,17 @@
             }
             .hero h2 {
                 font-size: 32px;
-                text-align: center;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+            .metric {
+                width: 100%;
+                max-width: 400px;
             }
         }
     </style>
@@ -162,7 +275,7 @@
 
 <!-- Navigation Bar -->
 <div class="navbar">
-    <h1>Project Name</h1>
+    <h1>Detailed Project</h1>
     <nav>
         <a href="#background">Background</a>
         <a href="#problem">Problem</a>
@@ -174,7 +287,10 @@
 
 <!-- Hero Banner -->
 <div class="hero">
-    <h2>Project Details Showcase</h2>
+    <div class="hero-content" >
+        <h2>A Heavy-duty 3D Adjustable Hinge.</h2>
+        <p>A invention about hinge which can shift in multiple ways.</p>
+    </div>
 </div>
 
 <!-- Main Content Container -->
@@ -183,26 +299,32 @@
     <!-- Project Background -->
     <section id="background" class="section">
         <h2>Project Background</h2>
-        <p>In this section, you can provide detailed information about the project's background, including the reasons for initiating the project, the current state of the related industry, market demands, etc. Provide sufficient context to help readers understand the importance and necessity of the project.</p>
+        <p>Hinge is a mechanical device used to connect two objects and allow relative rotation between them, mainly in the field of doors and windows.With the development of the construction industry, heavy doors are more and more widely used in large shopping malls, hotels, etc., and the market demand for flexible heavy-duty hinges is also increasing</p>
     </section>
 
     <!-- Problem to Solve -->
     <section id="problem" class="section">
         <h2>Problem to Solve</h2>
-        <p>This section describes the specific problems or challenges the project aims to address. It can include the shortcomings of existing methods, technical difficulties faced, user pain points, etc.</p>
+        <p>Current hinges on the market have problems including fragility, lack of flexibility, and difficulty in adjusting size, so the patent uses software such as Unity to design a new type of hinge to solve these problems.</p>
     </section>
 
     <!-- Solution Approach -->
     <section id="solution" class="section">
         <h2>Solution Approach</h2>
         <div class="content-grid">
-            <img src="https://via.placeholder.com/600x400" alt="Solution Illustration">
+            <img src="./photo/hinge2.png" alt="Solution Illustration">
             <div>
-                <p>In this section, elaborate on the project's solution and implementation methods. This includes the technologies, tools, methodologies, and project processes used. You can list points to ensure clarity and ease of understanding.</p>
+                <p>
+                    The utility model provides a heavy-duty three-dimensional adjustable hinge, including a fixed page and a movable page, one of which is provided with a first axis hole and the other is provided with a second axis hole, and the first axis hole and the second axis hole are connected through the up and down adjustment mechanism; the movable page is connected with the front, back and side adjustment mechanism; the up and down adjustment mechanism includes a hinge core, a threaded sleeve, a bushing, and an adjusting screw with a hexagonal socket;
+                </p>
+                <p>
+                    workflow:
+                </p>
                 <ul>
-                    <li>Utilize advanced tech stacks such as Python, TensorFlow, etc.</li>
-                    <li>Adopt Agile development methodologies to ensure timely project delivery.</li>
-                    <li>Conduct user research and feedback sessions to continuously optimize product features.</li>
+                    <li>Leveraged advanced technologies such as 3D modelling and Machine Learning.</li>
+                    <li>Adopted Agile development methodologies to ensure efficient project management.</li>
+                    <li>Designed the hinge with different departments and continuously tested it.</li>
+                    <li>Conducted regular user research and feedback sessions to continuously optimize features.</li>
                 </ul>
             </div>
         </div>
@@ -212,19 +334,19 @@
     <section id="results" class="section">
         <h2>Project Results</h2>
         <div class="results">
-            <img src="https://via.placeholder.com/800x400" alt="Project Results Illustration">
+            <img src="./photo/hinge1.jpg" alt="Project Results Illustration">
             <div class="metrics">
                 <div class="metric">
-                    <h3>User Growth</h3>
-                    <p>Increased by 50%</p>
+                    <h3>Market Share</h3>
+                    <p>50% Increase</p>
                 </div>
                 <div class="metric">
                     <h3>Cost Savings</h3>
-                    <p>Saved 30%</p>
+                    <p>30% Reduction</p>
                 </div>
                 <div class="metric">
-                    <h3>Customer Satisfaction</h3>
-                    <p>Improved to 90%</p>
+                    <h3>Sales Income</h3>
+                    <p>5 million yuan Increase</p>
                 </div>
             </div>
         </div>
@@ -233,11 +355,10 @@
     <!-- Contact Information -->
     <section id="contact" class="section">
         <h2>Contact Me</h2>
-        <p>If you are interested in this project or have any questions, feel free to contact me through the following methods:</p>
+        <p>If you have any questions or are interested in this project, feel free to reach out through the following methods:</p>
         <ul>
-            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li>Phone: 123-456-7890</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">My LinkedIn</a></li>
+            <li>Email: <a href="mailto:19302010047@fudan.edu.cn">19302010047@fudan.edu.cn</a></li>
+            <li>Phone: +86 19821227769 </li>
         </ul>
     </section>
 
@@ -245,7 +366,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>&copy; 2024 Qian Dai. All rights reserved.</p>
 </footer>
 
 </body>
