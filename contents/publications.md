@@ -6,6 +6,5 @@
 - <strong>Qian Dai(leader)</strong> (2022). Big data control platform in times of epidemic.[[Detail]](contents/projects/covid.html)
 - <strong>Qian Dai</strong> (2023). Model for Monitoring Suspicious Individual Customers in Banks.[[Detail]](contents/projects/Suspicious.html)
 - <strong>Qian Dai(leader)</strong> (2023). Intelligent Financial Product Recommendation System.[[Detail]](contents/projects/Recommendation.html)
-- <strong>Qian Dai</strong> (2023). Stock Trend Forecasting Application.[[Detail]](contents/projects/Stock.html)
-- <strong>Qian Dai(leader)</strong> (2021). Face Emotion Recognition Applications.[[Detail]](contents/projects/Emotion.html)
+- <strong>Qian Dai</strong> (2023). A new project waited (AIGC in bank industry)
 
