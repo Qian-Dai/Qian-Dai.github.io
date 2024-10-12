@@ -6,6 +6,8 @@
 
 - First-prize Entrepreneurship Innovation Competition Award, 2022.[[Certification]](contents/prizePhoto/4.pdf)
 
+- Excellent Award National University Innovative English Challenge, 2021.[[Certification]](contents/prizePhoto/6.png)
+
 - Third-prize Academic Scholarship, 2020.[[Certification]](contents/prizePhoto/5.pdf)
 
 
