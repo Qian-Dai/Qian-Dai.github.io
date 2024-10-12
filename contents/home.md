@@ -1,7 +1,11 @@
 
 
 
-Hello! I am Qian Dai. I am passionate about intelligent software design, AI application development, and have relevant experience and skills in software development, algorithm design, model training and optimisation. During my education and career, I have participated in entrepreneurship competitions , scientific research competitions, and published national patents.
+I’m enthusiastic, self-motivated, and have a strong work ethic. I have hands-on AI modeling experience and
+contributed to projects that improved banking operations and reduced fraud. My research experience includes
+using advanced techniques like LDA, PCA, Auto-sklearn, and machine learning modeling with SVM, RNN,
+XGBoost, YOLO, LRPNet, and AOD. I've been fortunate to receive recognition and funding for my work from
+both academic and industry professionals.
 #### Email
 19302010047@fudan.edu.cn
 
