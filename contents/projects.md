@@ -2,7 +2,7 @@
 
 - <strong>Qian Dai(leader)</strong> (2022). Drones Intelligent Parking Management System.  [[Detail]](contents/projects/parking.pdf)
 
-- <strong>Qian Dai</strong> (2023). Model for Monitoring Suspicious Individual Customers in Banks.[[Detail]](contents/projects/Suspicious.pdf)
+- <strong>Qian Dai</strong> (2023). Bank Credit Card Fraud User Identification System.[[Detail]](contents/projects/Suspicious.pdf)
 
 - <strong>Qian Dai(leader)</strong> (2023). Intelligent Financial Product Recommendation System.[[Detail]](contents/projects/Recommendation.pdf)
 
