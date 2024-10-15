@@ -1,6 +1,6 @@
 - Scholarship for Excellent Students (Top 15%), 2021.[[Certification]](contents/prizePhoto/scholarship(1).pdf)
 
-- National College Mathematics Challenge preliminary competition, 2020.[[Certification]](contents/prizePhoto/mathCompetitionAward.pdf)
+- National College Mathematical Ability Competition Runner-up, 2020.[[Certification]](contents/prizePhoto/mathCompetitionAward.pdf)
 
 - the First Award of Science and Innovation “Tengfei” Competition(best technology competition of FDU), 2022.[[Certification]](contents/prizePhoto/ResearchAward.pdf)
 
