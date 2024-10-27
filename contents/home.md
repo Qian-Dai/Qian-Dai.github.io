@@ -7,7 +7,7 @@ using advanced techniques like LDA, PCA, Auto-sklearn, and machine learning mode
 XGBoost, YOLO, LRPNet, and AOD. I've been fortunate to receive recognition and funding for my work from
 both academic and industry professionals.
 #### Email
-19302010047@fudan.edu.cn
+austindai2002@gmail.com
 
 #### Education
 B.E., Software Engineering, School of Computer Science, Fudan University , 2019—2023.
